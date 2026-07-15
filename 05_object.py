@@ -57,3 +57,17 @@ print(num, type(num))
 
 print(num, ">>>", type(num))
 print(num, ";", type(num))
+
+print("=== 자료형마다 동작이 다른것 확인하기===")
+
+print(3 + 5)
+print("3" + "5")
+print("안녕하" + "세요")
+
+# 자주하는 실수
+
+print(0.1 + 0.8)
+print(round(0.1 + 0.8, 2))
+
+print(10 / 2)
+print(type(10 / 2))
