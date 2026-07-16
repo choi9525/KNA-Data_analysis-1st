@@ -66,3 +66,6 @@ print(real / pr * 100, "%")  # 21/24
 
 pa = 500
 print(pa // 60, "시", pa % 60, "분")
+
+name = input("이름: 정후")
+print("안녕하세요,", name, "님!")
