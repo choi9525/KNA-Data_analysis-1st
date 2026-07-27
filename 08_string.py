@@ -97,3 +97,128 @@ print(fname.endswith(".csv"))  # True
 alpha = "abc"
 print(alpha == "abc")  # True
 print(alpha == "ABC")  # True
+
+# -------------------------------------------
+
+str = "a,b,c,d,e,a,a"
+
+print(str.count("a"))  # 3
+
+print(str.count(","))  # 6
+
+print(str.count(", "))  # 5 #count로 찾는 문자열과 완전히 동일해야 갯수를 샘
+
+sqe = "SQE-00Q8"
+
+sqe_index = sqe.find("SQE")
+print(sqe_index)  # 0
+
+sqe_index = sqe.find("-")
+print(sqe_index)  # 3
+sqe_fin = sqe[:sqe_index]  # sqe[0:3] > SQE
+print(sqe_fin)  # SQE
+
+# find 에서 했던 SQE 뽑아내기 실습 index 사용으로 바꾸기
+
+sqe_index = sqe.find("-")
+print(sqe_index)
+sqe_fin = sqe[:sqe_index]
+print(sqe_fin)
+
+print("EQP-001".startswith("EQP"))
+
+# 특정 문자열로 끝나는지 확인
+# True / False로 반환
+
+str2 = "월요일입니다! 여러분을 할 수 있어요!"
+
+str2.endswith("!")  # True
+
+fil = "sensor_log.csv"
+print(fil.startswith("sensor"))  # True
+print(fil.endswith(".csv"))  # True
+
+# .으로 연결하는 이런 도구들은 메서드라고 부름
+# 문자열이나 int, float처럼 특정 자료형 내부에 포함된 기능
+
+# ========================
+
+str3 = "abcdefg"
+print(str3)
+str = str3.upper()
+print(str3)
+
+str3 = str3.upper()
+
+s = "ready"
+big = s.upper()
+print(big)  # READY
+
+
+print("ABC".isupper())  # True
+print("abc".islower())  # True
+print("Abc".isupper())  # False
+
+fname = "Sensor_LOG.CSV"
+low = fname.lower()  # sensor_log.csv
+print(low.startswith("sensor"))  # True
+print(low.endswith(".csv"))  # True
+print(fname.endswith(".csv"))  # False
+
+pyh = "python"
+
+print(pyh[:2] + pyh[2].upper() + pyh[3:])
+
+# 공백 제거
+# .strip():앞과 뒤의 모든공백 제거(중간 띄어쓰기는 그대로 유지됨)
+# .lstrip():왼쪽 공백만 제거
+# .rstrip():오른쪽 공백만 제거
+
+raw = "          정상       "
+print(raw.strip())  # 정상
+print(raw.lstrip())  # 정상     "
+
+# strip으로 가운데 공백은 제거 불가능
+
+str4 = "===정상==="
+print(str4.strip("="))  # 정상
+
+# strip으로 특정 문자열을 지정하면 양옆에 있는 그 문자열을 지우게 함
+
+raw = "   NORMAL   "
+step1 = raw.strip()  # NORMAL
+step2 = step1.lower()  # normal
+
+chain = raw.strip().lower()  # normal
+
+raw = raw.strip().lower()
+
+print(raw.strip())
+
+
+str = "      Warning   "
+
+print(str.lower())
+print(str.strip().lower())
+
+s = "a,b,c,d"
+print(s.split(","))  # ["a","b","c","d"]
+
+s = "a,b,c,d"
+print(s.split(","))  # ['a', 'b', 'c', 'd']
+
+parts = ["2025", "01", "15"]
+print("-".join(parts))  # 2025-01-15 (사이에 - 넣어 합침)
+
+raw = "2025/01/15"
+parts = raw.split("/")  # ['2025', '01', '15']
+print("-".join(parts))  # 2025-01-15 (/ 를 - 로 교체)
+
+raw = "1, NORMAL ,25.3"
+parts = raw.split(",")  # ['1', ' NORMAL ', '25.3']
+status = parts[1].strip().lower()
+print(status)  # normal (공백 제거 후 소문자)
+
+name = "PUMP_A"
+temp = 87
+print(f"설비 {name}, 온도 {temp}도")  # 설비 PUMP_A, 온도 87도
