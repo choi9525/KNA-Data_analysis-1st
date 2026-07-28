@@ -222,3 +222,14 @@ print(status)  # normal (공백 제거 후 소문자)
 name = "PUMP_A"
 temp = 87
 print(f"설비 {name}, 온도 {temp}도")  # 설비 PUMP_A, 온도 87도
+
+
+hour = 8
+
+print(f"우리는 하루에 {hour}시간 수업을 듣고, 이는 {hour*60}시간 입니다.")
+
+a = 1
+b = 2
+c = 3
+
+print(f"평균:{int((a+b+c)/3)}입니다.")
