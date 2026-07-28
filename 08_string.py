@@ -233,3 +233,15 @@ b = 2
 c = 3
 
 print(f"평균:{int((a+b+c)/3)}입니다.")
+
+
+rate = 87.456
+print(f"{rate:.1f}")  # 87.5 (소수점 1자리, 반올림)
+print(f"{rate:.2f}")  # 87.46 (소수점 2자리)
+
+raw = " 5 , sensor_2 , WARNING , 0.78912 "
+parts = raw.strip().split(",")  # 앞뒤 공백 제거 후 쉼표로 분리
+sid = parts[1].strip()  # sensor_2
+status = parts[2].strip().lower()  # warning
+value = float(parts[3].strip())  # 0.78912
+print(f"[센서 {sid}] 상태 {status}, 측정값 {value:.2f}")
