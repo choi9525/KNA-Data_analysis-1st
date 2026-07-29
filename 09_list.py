@@ -211,3 +211,12 @@ print(n)  # [-1,2,8,22,37,109,1004]
 # 리스트에서 가장 처 위치만 찾아줌
 # print(f.index("일회용컵"))  # 1
 # print(f)  # 원본 매열에 변화 없음
+
+
+temps = [27, 24, 30, 22, 26, 24, 28]
+temps.sort()
+print(temps)  # [22, 24, 24, 26, 27, 28, 30]
+temps.reverse()
+print(temps)  # [30, 28, 27, 26, 24, 24, 22]
+print(temps.count(24))  # 2
+print(temps.index(24))  # 4
