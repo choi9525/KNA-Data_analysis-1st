@@ -35,13 +35,6 @@ else:
     print("정답이 아닙니다")
 
 
-age = int(input("나이를 입력하세요: "))
-if age >= 19:
-    print("성인입니다")
-else:
-    print("미성년자입니다")
-
-
 input_color = input("신호등색을 입력하시오")
 if input_color == "초록색":
     print("건너세요")
@@ -138,3 +131,39 @@ for su in range(1, 10):
 for i in range(1, 6):
     for j in range(1, 10):
         print(f"{i}*{j}={i*j}")
+
+
+for i in range(2, 10, 2):
+    for j in range(1, 10):
+        print(i * j)
+
+
+cor = 25
+guess = 0
+while guess != cor:
+    guess = int(input("맞혀보세요"))
+print("정답입니다")
+
+
+first = int(input("1번째: "))
+max_value = first  # 첫 값 기준
+for i in range(4):  # 나머지 비교
+    v = int(input("다음: "))
+    if v > max_value:
+        max_value = v
+print("최댓값:", max_value)
+
+
+num = int(input("횟수를 입력하시오"))
+found = False
+
+for i in range(num):
+    pt = int(input("측정값을 입력하시오"))
+    if pt > 80:
+        found = True
+        break
+
+if found == True:
+    print("이상 감지")
+else:
+    print("이상 없음")
